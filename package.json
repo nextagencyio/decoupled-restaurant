@@ -2,9 +2,12 @@
   "name": "decoupled-restaurant",
   "version": "0.1.1",
   "private": true,
-  "engines": { "node": ">=18.18.0", "npm": ">=9.0.0" },
+  "engines": {
+    "node": ">=18.18.0",
+    "npm": ">=9.0.0"
+  },
   "scripts": {
-    "dev": "next dev",
+    "dev": "WATCHPACK_POLLING=true next dev --webpack",
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
