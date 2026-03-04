@@ -1,0 +1,299 @@
+{
+  "model": [
+    {
+      "bundle": "homepage",
+      "label": "Homepage",
+      "description": "Restaurant landing page with hero section, features, and call-to-action areas",
+      "fields": [
+        { "id": "hero_title", "label": "Hero Title", "type": "string" },
+        { "id": "hero_subtitle", "label": "Hero Subtitle", "type": "string" },
+        { "id": "hero_description", "label": "Hero Description", "type": "text" },
+        { "id": "features_items", "label": "Feature Items", "type": "paragraph(feature_item)[]" },
+        { "id": "cta_title", "label": "CTA Section Title", "type": "string" },
+        { "id": "cta_description", "label": "CTA Description", "type": "text" },
+        { "id": "cta_primary", "label": "Primary CTA Text", "type": "string" },
+        { "id": "cta_secondary", "label": "Secondary CTA Text", "type": "string" }
+      ]
+    },
+    {
+      "bundle": "menu_item",
+      "label": "Menu Item",
+      "description": "A dish or drink available on the restaurant menu",
+      "body": true,
+      "fields": [
+        { "id": "price", "label": "Price", "type": "string" },
+        { "id": "menu_category", "label": "Menu Category", "type": "string" },
+        { "id": "dietary_info", "label": "Dietary Info", "type": "string" },
+        { "id": "image", "label": "Image", "type": "image" }
+      ]
+    },
+    {
+      "bundle": "event",
+      "label": "Event",
+      "description": "Special events hosted at the restaurant",
+      "body": true,
+      "fields": [
+        { "id": "event_date", "label": "Event Date", "type": "datetime" },
+        { "id": "location", "label": "Location", "type": "string" },
+        { "id": "image", "label": "Image", "type": "image" }
+      ]
+    },
+    {
+      "bundle": "review",
+      "label": "Review",
+      "description": "Customer reviews and testimonials",
+      "body": true,
+      "fields": [
+        { "id": "reviewer_name", "label": "Reviewer Name", "type": "string" },
+        { "id": "rating", "label": "Rating", "type": "integer" },
+        { "id": "visit_date", "label": "Visit Date", "type": "datetime" }
+      ]
+    },
+    {
+      "bundle": "page",
+      "label": "Basic Page",
+      "description": "Static content pages",
+      "body": true,
+      "fields": []
+    },
+    {
+      "entity": "paragraph",
+      "bundle": "feature_item",
+      "label": "Feature Item",
+      "description": "Individual feature highlight with icon, title, and description",
+      "fields": [
+        { "id": "icon", "label": "Icon", "type": "string" },
+        { "id": "title", "label": "Title", "type": "string!" },
+        { "id": "description", "label": "Description", "type": "text" }
+      ]
+    }
+  ],
+  "content": [
+    {
+      "id": "feature-seasonal",
+      "type": "paragraph.feature_item",
+      "values": { "icon": "Leaf", "title": "Seasonal Ingredients", "description": "We source the freshest ingredients from local farms, updating our menu each season to showcase the best produce available." }
+    },
+    {
+      "id": "feature-chef",
+      "type": "paragraph.feature_item",
+      "values": { "icon": "ChefHat", "title": "Award-Winning Chef", "description": "Our executive chef brings over 20 years of culinary expertise, crafting dishes that blend classical techniques with modern innovation." }
+    },
+    {
+      "id": "feature-wine",
+      "type": "paragraph.feature_item",
+      "values": { "icon": "Wine", "title": "Curated Wine List", "description": "An expertly curated selection of wines from renowned vineyards, hand-picked to complement every dish on our menu." }
+    },
+    {
+      "id": "feature-ambiance",
+      "type": "paragraph.feature_item",
+      "values": { "icon": "Lamp", "title": "Elegant Ambiance", "description": "Warm lighting, thoughtful decor, and attentive service create the perfect atmosphere for any occasion." }
+    },
+    {
+      "id": "feature-events",
+      "type": "paragraph.feature_item",
+      "values": { "icon": "CalendarDays", "title": "Private Events", "description": "Host your special celebrations in our private dining room, with customized menus and dedicated staff." }
+    },
+    {
+      "id": "feature-brunch",
+      "type": "paragraph.feature_item",
+      "values": { "icon": "Sun", "title": "Weekend Brunch", "description": "Join us every Saturday and Sunday for our beloved brunch service, featuring signature cocktails and chef specials." }
+    },
+    {
+      "id": "homepage",
+      "type": "node.homepage",
+      "path": "/homepage",
+      "values": {
+        "title": "The Golden Fork Homepage",
+        "hero_title": "A Culinary Experience Like No Other",
+        "hero_subtitle": "Fine Dining Redefined",
+        "hero_description": "<p>Welcome to The Golden Fork, where every meal is a celebration. Our chef-driven menu features locally sourced ingredients, house-made pastas, and dishes that honor tradition while embracing creativity.</p>",
+        "features_items": ["@feature-seasonal", "@feature-chef", "@feature-wine", "@feature-ambiance", "@feature-events", "@feature-brunch"],
+        "cta_title": "Reserve Your Table Tonight",
+        "cta_description": "<p>Whether it's a romantic dinner for two, a family gathering, or a corporate event, we'll make your evening unforgettable. Book now and experience the finest dining in the city.</p>",
+        "cta_primary": "Make Reservation",
+        "cta_secondary": "View Menu"
+      }
+    },
+    {
+      "id": "menu-item-1",
+      "type": "node.menu_item",
+      "path": "/menu/pan-seared-salmon",
+      "values": {
+        "title": "Pan-Seared Atlantic Salmon",
+        "body": "<p>Fresh Atlantic salmon, pan-seared to golden perfection, served on a bed of saffron risotto with roasted asparagus and a lemon-dill beurre blanc.</p>",
+        "price": "$34",
+        "menu_category": "Entrees",
+        "dietary_info": "Gluten-Free",
+        "image": { "uri": "https://images.unsplash.com/photo-1467003909585-2f8a72700288?w=800&q=80", "alt": "Pan-seared salmon on a white plate", "title": "Pan-Seared Atlantic Salmon" }
+      }
+    },
+    {
+      "id": "menu-item-2",
+      "type": "node.menu_item",
+      "path": "/menu/truffle-risotto",
+      "values": {
+        "title": "Black Truffle Risotto",
+        "body": "<p>Creamy arborio rice slow-cooked with porcini mushrooms, finished with shaved black truffle and aged Parmigiano-Reggiano.</p>",
+        "price": "$28",
+        "menu_category": "Entrees",
+        "dietary_info": "Vegetarian",
+        "image": { "uri": "https://images.unsplash.com/photo-1476124369491-e7addf5db371?w=800&q=80", "alt": "Truffle risotto in a bowl", "title": "Black Truffle Risotto" }
+      }
+    },
+    {
+      "id": "menu-item-3",
+      "type": "node.menu_item",
+      "path": "/menu/wagyu-burger",
+      "values": {
+        "title": "Wagyu Beef Burger",
+        "body": "<p>Premium wagyu beef patty topped with aged cheddar, caramelized onions, house-made pickles, and truffle aioli on a brioche bun.</p>",
+        "price": "$26",
+        "menu_category": "Entrees",
+        "dietary_info": "",
+        "image": { "uri": "https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=800&q=80", "alt": "Gourmet burger on a wooden board", "title": "Wagyu Beef Burger" }
+      }
+    },
+    {
+      "id": "menu-item-4",
+      "type": "node.menu_item",
+      "path": "/menu/caesar-salad",
+      "values": {
+        "title": "Classic Caesar Salad",
+        "body": "<p>Crisp romaine hearts tossed with house-made Caesar dressing, shaved Parmesan, garlic croutons, and white anchovies.</p>",
+        "price": "$16",
+        "menu_category": "Starters",
+        "dietary_info": "",
+        "image": { "uri": "https://images.unsplash.com/photo-1550304943-4f24f54ddde9?w=800&q=80", "alt": "Fresh Caesar salad", "title": "Classic Caesar Salad" }
+      }
+    },
+    {
+      "id": "menu-item-5",
+      "type": "node.menu_item",
+      "path": "/menu/chocolate-fondant",
+      "values": {
+        "title": "Chocolate Fondant",
+        "body": "<p>Warm Valrhona dark chocolate fondant with a molten center, served with vanilla bean ice cream and fresh raspberries.</p>",
+        "price": "$14",
+        "menu_category": "Desserts",
+        "dietary_info": "Vegetarian",
+        "image": { "uri": "https://images.unsplash.com/photo-1624353365286-3f8d62daad51?w=800&q=80", "alt": "Chocolate fondant dessert", "title": "Chocolate Fondant" }
+      }
+    },
+    {
+      "id": "menu-item-6",
+      "type": "node.menu_item",
+      "path": "/menu/lobster-bisque",
+      "values": {
+        "title": "Maine Lobster Bisque",
+        "body": "<p>Velvety smooth lobster bisque made with fresh Maine lobster, finished with a touch of cognac and cream.</p>",
+        "price": "$18",
+        "menu_category": "Starters",
+        "dietary_info": "Gluten-Free",
+        "image": { "uri": "https://images.unsplash.com/photo-1547592166-23ac45744acd?w=800&q=80", "alt": "Bowl of lobster bisque", "title": "Maine Lobster Bisque" }
+      }
+    },
+    {
+      "id": "event-1",
+      "type": "node.event",
+      "path": "/events/wine-pairing-dinner",
+      "values": {
+        "title": "Wine Pairing Dinner",
+        "body": "<p>Join us for an exclusive five-course wine pairing dinner featuring selections from Napa Valley's premier wineries. Our sommelier will guide you through each pairing.</p>",
+        "event_date": "2026-04-15T19:00:00",
+        "location": "Main Dining Room",
+        "image": { "uri": "https://images.unsplash.com/photo-1510812431401-41d2bd2722f3?w=800&q=80", "alt": "Wine glasses at a dinner table", "title": "Wine Pairing Dinner" }
+      }
+    },
+    {
+      "id": "event-2",
+      "type": "node.event",
+      "path": "/events/jazz-brunch",
+      "values": {
+        "title": "Live Jazz Brunch",
+        "body": "<p>Every first Sunday of the month, enjoy our special brunch menu accompanied by live jazz performances from local artists. Featuring bottomless mimosas and seasonal specials.</p>",
+        "event_date": "2026-04-06T11:00:00",
+        "location": "Garden Terrace",
+        "image": { "uri": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=800&q=80", "alt": "Jazz performance at brunch", "title": "Live Jazz Brunch" }
+      }
+    },
+    {
+      "id": "event-3",
+      "type": "node.event",
+      "path": "/events/cooking-class",
+      "values": {
+        "title": "Chef's Cooking Class",
+        "body": "<p>Learn the secrets behind our most beloved dishes in this intimate cooking class. Limited to 12 guests, you'll prepare a three-course meal and enjoy it together family-style.</p>",
+        "event_date": "2026-05-10T14:00:00",
+        "location": "Private Kitchen",
+        "image": { "uri": "https://images.unsplash.com/photo-1556910103-1c02745aae4d?w=800&q=80", "alt": "Chef teaching a cooking class", "title": "Chef's Cooking Class" }
+      }
+    },
+    {
+      "id": "review-1",
+      "type": "node.review",
+      "path": "/reviews/amazing-anniversary",
+      "values": {
+        "title": "Amazing Anniversary Dinner",
+        "body": "<p>We celebrated our 10th anniversary here and it was absolutely magical. The tasting menu was incredible, every course more impressive than the last.</p>",
+        "reviewer_name": "Sarah M.",
+        "rating": 5,
+        "visit_date": "2026-01-20T19:00:00"
+      }
+    },
+    {
+      "id": "review-2",
+      "type": "node.review",
+      "path": "/reviews/best-salmon",
+      "values": {
+        "title": "Best Salmon in the City",
+        "body": "<p>The pan-seared salmon here is on another level. The risotto underneath was perfectly creamy, and the beurre blanc tied everything together beautifully.</p>",
+        "reviewer_name": "James T.",
+        "rating": 5,
+        "visit_date": "2026-02-05T20:00:00"
+      }
+    },
+    {
+      "id": "review-3",
+      "type": "node.review",
+      "path": "/reviews/great-brunch",
+      "values": {
+        "title": "Wonderful Weekend Brunch",
+        "body": "<p>The jazz brunch is a gem! Great music, fantastic food, and the mimosas kept flowing. The eggs benedict with hollandaise was divine.</p>",
+        "reviewer_name": "Lisa K.",
+        "rating": 4,
+        "visit_date": "2026-02-02T11:30:00"
+      }
+    },
+    {
+      "id": "review-4",
+      "type": "node.review",
+      "path": "/reviews/impressive-private-event",
+      "values": {
+        "title": "Impressive Private Event",
+        "body": "<p>We hosted a corporate dinner for 30 guests and The Golden Fork exceeded all expectations. The customized menu was outstanding and the service was impeccable.</p>",
+        "reviewer_name": "David R.",
+        "rating": 5,
+        "visit_date": "2026-01-15T18:30:00"
+      }
+    },
+    {
+      "id": "about-page",
+      "type": "node.page",
+      "path": "/about",
+      "values": {
+        "title": "About The Golden Fork",
+        "body": "<p>Founded in 2018, The Golden Fork has become a cornerstone of the local dining scene. Our philosophy is simple: exceptional ingredients, prepared with skill and passion, served in an atmosphere of warmth and hospitality.</p><h2>Our Story</h2><p>Chef Maria Santos opened The Golden Fork with a vision to create a restaurant that honors both tradition and innovation. After training in kitchens across France, Italy, and Japan, she returned home to share her culinary perspective.</p><h2>Our Commitment</h2><p>We partner with over 15 local farms and purveyors to ensure the freshest ingredients reach your table. Our commitment to sustainability extends to every aspect of our operation.</p>"
+      }
+    },
+    {
+      "id": "contact-page",
+      "type": "node.page",
+      "path": "/contact",
+      "values": {
+        "title": "Contact & Reservations",
+        "body": "<p>We'd love to hear from you. Whether you're looking to make a reservation, plan a private event, or simply have a question, our team is here to help.</p><h2>Hours</h2><p><strong>Lunch:</strong> Tuesday - Friday, 11:30 AM - 2:30 PM<br/><strong>Dinner:</strong> Tuesday - Saturday, 5:30 PM - 10:00 PM<br/><strong>Brunch:</strong> Saturday & Sunday, 10:00 AM - 2:30 PM</p><h2>Location</h2><p>742 Maple Avenue, Downtown<br/>Reservations: (555) 234-5678<br/>Email: reservations@thegoldenfork.com</p>"
+      }
+    }
+  ]
+}

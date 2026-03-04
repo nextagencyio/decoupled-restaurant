@@ -1,0 +1,254 @@
+{
+  "model": [
+    {
+      "bundle": "homepage",
+      "label": "Homepage",
+      "description": "Restaurant landing page with hero section, statistics, and call-to-action areas",
+      "fields": [
+        { "id": "hero_title", "label": "Hero Title", "type": "string", "description": "Main headline in the hero section" },
+        { "id": "hero_subtitle", "label": "Hero Subtitle", "type": "string", "description": "Secondary text below the hero title" },
+        { "id": "hero_description", "label": "Hero Description", "type": "text", "description": "Longer descriptive text for the hero section" },
+        { "id": "stats_items", "label": "Statistics", "type": "paragraph(stat_item)[]", "description": "Key metrics and statistics" },
+        { "id": "featured_items_title", "label": "Featured Items Title", "type": "string", "description": "Heading for the featured menu items section" },
+        { "id": "cta_title", "label": "CTA Title", "type": "string" },
+        { "id": "cta_description", "label": "CTA Description", "type": "text" },
+        { "id": "cta_primary", "label": "Primary CTA", "type": "string" },
+        { "id": "cta_secondary", "label": "Secondary CTA", "type": "string" }
+      ]
+    },
+    {
+      "bundle": "menu_item",
+      "label": "Menu Item",
+      "description": "A dish or drink available on the restaurant menu",
+      "body": true,
+      "fields": [
+        { "id": "price", "label": "Price", "type": "string", "description": "Menu item price" },
+        { "id": "menu_category", "label": "Menu Category", "type": "string", "description": "Category on the menu" },
+        { "id": "dietary_info", "label": "Dietary Info", "type": "string", "description": "Dietary flags" },
+        { "id": "image", "label": "Image", "type": "image", "description": "Photo of the dish" }
+      ]
+    },
+    {
+      "bundle": "event",
+      "label": "Event",
+      "description": "Special events hosted at the restaurant",
+      "body": true,
+      "fields": [
+        { "id": "event_date", "label": "Event Date", "type": "datetime", "description": "Date and time of the event" },
+        { "id": "location", "label": "Location", "type": "string", "description": "Event venue or area" },
+        { "id": "image", "label": "Image", "type": "image", "description": "Event photo" }
+      ]
+    },
+    {
+      "bundle": "review",
+      "label": "Review",
+      "description": "Customer reviews and testimonials",
+      "body": true,
+      "fields": [
+        { "id": "reviewer_name", "label": "Reviewer Name", "type": "string", "description": "Name of the reviewer" },
+        { "id": "rating", "label": "Rating", "type": "integer", "description": "Star rating out of 5" },
+        { "id": "visit_date", "label": "Visit Date", "type": "datetime", "description": "Date of the visit" }
+      ]
+    },
+    {
+      "bundle": "page",
+      "label": "Basic Page",
+      "description": "Static content pages",
+      "body": true,
+      "fields": []
+    },
+    {
+      "entity": "paragraph",
+      "bundle": "stat_item",
+      "label": "Statistic Item",
+      "description": "Individual statistic with number and label",
+      "fields": [
+        { "id": "number", "label": "Number", "type": "string!", "description": "Statistic value" },
+        { "id": "label", "label": "Label", "type": "string!", "description": "Statistic label" }
+      ]
+    }
+  ],
+  "content": [
+    {
+      "id": "stat-1", "type": "paragraph.stat_item",
+      "values": { "number": "15+", "label": "Local Farm Partners" }
+    },
+    {
+      "id": "stat-2", "type": "paragraph.stat_item",
+      "values": { "number": "4.8", "label": "Average Rating" }
+    },
+    {
+      "id": "stat-3", "type": "paragraph.stat_item",
+      "values": { "number": "8", "label": "Years Open" }
+    },
+    {
+      "id": "stat-4", "type": "paragraph.stat_item",
+      "values": { "number": "200+", "label": "Wine Selections" }
+    },
+    {
+      "id": "homepage", "type": "node.homepage", "path": "/homepage",
+      "values": {
+        "title": "Ember & Bloom Homepage",
+        "hero_title": "Where Fire Meets Farm",
+        "hero_subtitle": "Ember & Bloom",
+        "hero_description": "<p>A wood-fired kitchen celebrating the seasons. Every dish begins with the finest local ingredients, kissed by flame and crafted with care. Join us for an unforgettable dining experience.</p>",
+        "stats_items": ["@stat-1", "@stat-2", "@stat-3", "@stat-4"],
+        "featured_items_title": "From Our Kitchen",
+        "cta_title": "Reserve Your Table",
+        "cta_description": "<p>Whether it is a romantic dinner for two, a family celebration, or a corporate gathering, we will make your evening exceptional. Book online or call us directly.</p>",
+        "cta_primary": "Make a Reservation",
+        "cta_secondary": "View Full Menu"
+      }
+    },
+    {
+      "id": "menu-wood-fired-salmon", "type": "node.menu_item", "path": "/menu/wood-fired-salmon",
+      "values": {
+        "title": "Wood-Fired King Salmon",
+        "body": "<p>Wild King salmon roasted over cherry wood, served with charred broccolini, fingerling potatoes, and a Meyer lemon herb butter. The wood fire lends a subtle smokiness that complements the rich, silky fish.</p>",
+        "price": "$38",
+        "menu_category": "Entrees",
+        "dietary_info": "Gluten-Free",
+        "image": { "uri": "https://images.unsplash.com/photo-1467003909585-2f8a72700288?w=800&q=80", "alt": "Wood-fired salmon with broccolini", "title": "Wood-Fired King Salmon" }
+      }
+    },
+    {
+      "id": "menu-dry-aged-ribeye", "type": "node.menu_item", "path": "/menu/dry-aged-ribeye",
+      "values": {
+        "title": "Dry-Aged Ribeye",
+        "body": "<p>45-day dry-aged prime ribeye, seared over live oak and finished with bone marrow compound butter. Served with roasted garlic mashed potatoes and seasonal vegetables from our partner farm.</p>",
+        "price": "$52",
+        "menu_category": "Entrees",
+        "dietary_info": "",
+        "image": { "uri": "https://images.unsplash.com/photo-1544025162-d76694265947?w=800&q=80", "alt": "Dry-aged ribeye steak on a plate", "title": "Dry-Aged Ribeye" }
+      }
+    },
+    {
+      "id": "menu-heirloom-salad", "type": "node.menu_item", "path": "/menu/heirloom-tomato-salad",
+      "values": {
+        "title": "Heirloom Tomato Salad",
+        "body": "<p>Peak-season heirloom tomatoes from Sunrise Farm with burrata, basil oil, aged balsamic, and Maldon sea salt. Simple, perfect, and available only when tomatoes are at their best.</p>",
+        "price": "$18",
+        "menu_category": "Starters",
+        "dietary_info": "Vegetarian, Gluten-Free",
+        "image": { "uri": "https://images.unsplash.com/photo-1592417817098-8fd3d9eb14a5?w=800&q=80", "alt": "Heirloom tomato salad with burrata", "title": "Heirloom Tomato Salad" }
+      }
+    },
+    {
+      "id": "menu-mushroom-pizza", "type": "node.menu_item", "path": "/menu/wild-mushroom-flatbread",
+      "values": {
+        "title": "Wild Mushroom Flatbread",
+        "body": "<p>Wood-fired flatbread topped with a mix of foraged wild mushrooms, truffle cream, fontina cheese, and fresh thyme. Our dough is naturally leavened for 72 hours before baking in the 800-degree oven.</p>",
+        "price": "$22",
+        "menu_category": "Starters",
+        "dietary_info": "Vegetarian",
+        "image": { "uri": "https://images.unsplash.com/photo-1513104890138-7c749659a591?w=800&q=80", "alt": "Wood-fired mushroom flatbread", "title": "Wild Mushroom Flatbread" }
+      }
+    },
+    {
+      "id": "menu-apple-galette", "type": "node.menu_item", "path": "/menu/apple-galette",
+      "values": {
+        "title": "Apple Galette",
+        "body": "<p>Rustic apple galette made with Honeycrisp apples from Orchard Hill Farm, brown butter, and a hint of cardamom. Served warm with house-made vanilla bean ice cream and salted caramel.</p>",
+        "price": "$14",
+        "menu_category": "Desserts",
+        "dietary_info": "Vegetarian",
+        "image": { "uri": "https://images.unsplash.com/photo-1568571780765-9276ac8b75a2?w=800&q=80", "alt": "Rustic apple galette with ice cream", "title": "Apple Galette" }
+      }
+    },
+    {
+      "id": "menu-smoked-old-fashioned", "type": "node.menu_item", "path": "/menu/smoked-old-fashioned",
+      "values": {
+        "title": "Smoked Old Fashioned",
+        "body": "<p>Our signature cocktail: bourbon smoked tableside with applewood chips, stirred with demerara syrup, aromatic bitters, and a flamed orange peel. A theatrical start to any evening.</p>",
+        "price": "$16",
+        "menu_category": "Cocktails",
+        "dietary_info": "",
+        "image": { "uri": "https://images.unsplash.com/photo-1470337458703-46ad1756a187?w=800&q=80", "alt": "Smoked Old Fashioned cocktail", "title": "Smoked Old Fashioned" }
+      }
+    },
+    {
+      "id": "event-harvest-dinner", "type": "node.event", "path": "/events/harvest-dinner",
+      "values": {
+        "title": "Farm-to-Table Harvest Dinner",
+        "body": "<p>Join us for a special five-course harvest dinner showcasing the best of the fall season. Chef Elena will prepare a prix fixe menu featuring ingredients sourced exclusively from our partner farms within 25 miles of the restaurant.</p><p>Wine pairings selected by our sommelier are available. This intimate dinner is limited to 40 guests.</p>",
+        "event_date": "2026-10-17T18:30:00",
+        "location": "Garden Dining Room",
+        "image": { "uri": "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=800&q=80", "alt": "Elegant farm-to-table dinner setting", "title": "Harvest Dinner" }
+      }
+    },
+    {
+      "id": "event-wine-dinner", "type": "node.event", "path": "/events/winemakers-dinner",
+      "values": {
+        "title": "Winemaker's Dinner with Willamette Valley Vineyards",
+        "body": "<p>An exclusive evening pairing Chef Elena's wood-fired cuisine with wines from Willamette Valley Vineyards. Winemaker Sarah Kline will guide guests through each pairing, sharing stories of the harvest and the art of winemaking.</p><p>Five courses, five wines, one unforgettable evening. Space is limited to 30 guests.</p>",
+        "event_date": "2026-04-25T19:00:00",
+        "location": "Main Dining Room",
+        "image": { "uri": "https://images.unsplash.com/photo-1510812431401-41d2bd2722f3?w=800&q=80", "alt": "Wine glasses at a dinner table", "title": "Winemaker's Dinner" }
+      }
+    },
+    {
+      "id": "event-brunch-class", "type": "node.event", "path": "/events/sunday-cooking-class",
+      "values": {
+        "title": "Sunday Morning Cooking Class",
+        "body": "<p>Learn the fundamentals of wood-fired cooking in this hands-on class. Chef Elena will teach you how to manage heat, develop flavor through fire, and prepare three dishes in our wood-fired oven.</p><p>Class includes all ingredients, recipes to take home, and a glass of prosecco. Limited to 12 participants per session.</p>",
+        "event_date": "2026-05-03T10:00:00",
+        "location": "Open Kitchen",
+        "image": { "uri": "https://images.unsplash.com/photo-1556910103-1c02745aae4d?w=800&q=80", "alt": "Chef teaching a cooking class", "title": "Sunday Cooking Class" }
+      }
+    },
+    {
+      "id": "review-anniversary", "type": "node.review", "path": "/reviews/unforgettable-anniversary",
+      "values": {
+        "title": "Unforgettable Anniversary Dinner",
+        "body": "<p>We celebrated our anniversary at Ember and Bloom and it exceeded every expectation. The wood-fired salmon was the best fish I have ever had. The smoked Old Fashioned was a showstopper. The staff made us feel truly special.</p>",
+        "reviewer_name": "Michelle T.",
+        "rating": 5,
+        "visit_date": "2026-02-14T19:00:00"
+      }
+    },
+    {
+      "id": "review-steak", "type": "node.review", "path": "/reviews/incredible-steak",
+      "values": {
+        "title": "The Best Steak in Town",
+        "body": "<p>The dry-aged ribeye is absolutely phenomenal. The wood fire gives it a depth of flavor you simply cannot get at home. The bone marrow butter is pure indulgence. We have been back three times already this year.</p>",
+        "reviewer_name": "Robert K.",
+        "rating": 5,
+        "visit_date": "2026-01-25T20:00:00"
+      }
+    },
+    {
+      "id": "review-vegetarian", "type": "node.review", "path": "/reviews/outstanding-vegetarian-options",
+      "values": {
+        "title": "Outstanding Vegetarian Options",
+        "body": "<p>As a vegetarian, I often feel like an afterthought at restaurants. Not here. The wild mushroom flatbread and the heirloom tomato salad were both extraordinary. The staff was knowledgeable about every ingredient and happy to customize dishes.</p>",
+        "reviewer_name": "Sara L.",
+        "rating": 5,
+        "visit_date": "2026-02-08T19:30:00"
+      }
+    },
+    {
+      "id": "review-brunch", "type": "node.review", "path": "/reviews/perfect-sunday-brunch",
+      "values": {
+        "title": "Perfect Sunday Brunch",
+        "body": "<p>The weekend brunch at Ember and Bloom is a hidden gem. Wood-fired eggs with chorizo, fresh-baked pastries, and the best coffee in the city. The garden patio is lovely on a sunny morning. Highly recommend making a reservation.</p>",
+        "reviewer_name": "Daniel W.",
+        "rating": 4,
+        "visit_date": "2026-02-22T11:00:00"
+      }
+    },
+    {
+      "id": "about-page", "type": "node.page", "path": "/about",
+      "values": {
+        "title": "About Ember & Bloom",
+        "body": "<p>Ember & Bloom opened in 2018 with a simple mission: to celebrate the flavors of the Pacific Northwest through the primal art of wood-fired cooking. Every dish that leaves our kitchen has been touched by flame.</p><h2>Our Chef</h2><p>Chef Elena Vasquez trained in the wood-fired kitchens of Spain and Argentina before returning home to open Ember & Bloom. Her cooking philosophy is rooted in restraint - letting exceptional ingredients speak for themselves with the enhancement of live fire.</p><h2>Our Ingredients</h2><p>We partner with over 15 local farms and purveyors within a 50-mile radius. Our menu changes weekly based on what is freshest and most flavorful. We believe great cooking starts long before the kitchen - it starts in the soil.</p><h2>Our Kitchen</h2><p>At the heart of the restaurant is a custom-built wood-burning oven and open hearth, fueled by sustainably harvested hardwoods. The open kitchen allows guests to watch the dance of fire and food.</p>"
+      }
+    },
+    {
+      "id": "contact-page", "type": "node.page", "path": "/contact",
+      "values": {
+        "title": "Contact & Reservations",
+        "body": "<p>We would love to welcome you to Ember & Bloom. Reservations are recommended, especially on weekends.</p><h2>Hours</h2><p><strong>Dinner:</strong> Tuesday - Saturday, 5:00 PM - 10:00 PM<br/><strong>Brunch:</strong> Saturday & Sunday, 10:00 AM - 2:00 PM<br/><strong>Happy Hour:</strong> Tuesday - Friday, 4:00 PM - 6:00 PM</p><h2>Location</h2><p>Ember & Bloom<br/>315 NW Everett Street<br/>Portland, OR 97209</p><h2>Contact</h2><p>Reservations: (555) 890-1234<br/>Events & Private Dining: events@emberandbloom.com<br/>General: info@emberandbloom.com</p>"
+      }
+    }
+  ]
+}

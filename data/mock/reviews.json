@@ -1,0 +1,93 @@
+{
+  "data": {
+    "nodeReviews": {
+      "__typename": "NodeReviewConnection",
+      "nodes": [
+        {
+          "__typename": "NodeReview",
+          "id": "review-anniversary",
+          "title": "Unforgettable Anniversary Dinner",
+          "path": "/reviews/unforgettable-anniversary",
+          "body": {
+            "processed": "<p>We celebrated our anniversary at Ember and Bloom and it exceeded every expectation. The wood-fired salmon was the best fish I have ever had. The smoked Old Fashioned was a showstopper. The staff made us feel truly special.</p>",
+            "summary": "We celebrated our anniversary at Ember and Bloom and it exceeded every expectation. The wood-fired salmon was the best fish I have ever had. The smoked Old Fashioned was a showstopper. The staff made "
+          },
+          "reviewerName": "Michelle T.",
+          "rating": 5,
+          "visitDate": {
+            "timestamp": 1771117200
+          },
+          "created": {
+            "timestamp": 1760000000
+          },
+          "changed": {
+            "timestamp": 1760000000
+          }
+        },
+        {
+          "__typename": "NodeReview",
+          "id": "review-steak",
+          "title": "The Best Steak in Town",
+          "path": "/reviews/incredible-steak",
+          "body": {
+            "processed": "<p>The dry-aged ribeye is absolutely phenomenal. The wood fire gives it a depth of flavor you simply cannot get at home. The bone marrow butter is pure indulgence. We have been back three times already this year.</p>",
+            "summary": "The dry-aged ribeye is absolutely phenomenal. The wood fire gives it a depth of flavor you simply cannot get at home. The bone marrow butter is pure indulgence. We have been back three times already t"
+          },
+          "reviewerName": "Robert K.",
+          "rating": 5,
+          "visitDate": {
+            "timestamp": 1769392800
+          },
+          "created": {
+            "timestamp": 1760000000
+          },
+          "changed": {
+            "timestamp": 1760000000
+          }
+        },
+        {
+          "__typename": "NodeReview",
+          "id": "review-vegetarian",
+          "title": "Outstanding Vegetarian Options",
+          "path": "/reviews/outstanding-vegetarian-options",
+          "body": {
+            "processed": "<p>As a vegetarian, I often feel like an afterthought at restaurants. Not here. The wild mushroom flatbread and the heirloom tomato salad were both extraordinary. The staff was knowledgeable about every ingredient and happy to customize dishes.</p>",
+            "summary": "As a vegetarian, I often feel like an afterthought at restaurants. Not here. The wild mushroom flatbread and the heirloom tomato salad were both extraordinary. The staff was knowledgeable about every "
+          },
+          "reviewerName": "Sara L.",
+          "rating": 5,
+          "visitDate": {
+            "timestamp": 1770600600
+          },
+          "created": {
+            "timestamp": 1760000000
+          },
+          "changed": {
+            "timestamp": 1760000000
+          }
+        },
+        {
+          "__typename": "NodeReview",
+          "id": "review-brunch",
+          "title": "Perfect Sunday Brunch",
+          "path": "/reviews/perfect-sunday-brunch",
+          "body": {
+            "processed": "<p>The weekend brunch at Ember and Bloom is a hidden gem. Wood-fired eggs with chorizo, fresh-baked pastries, and the best coffee in the city. The garden patio is lovely on a sunny morning. Highly recommend making a reservation.</p>",
+            "summary": "The weekend brunch at Ember and Bloom is a hidden gem. Wood-fired eggs with chorizo, fresh-baked pastries, and the best coffee in the city. The garden patio is lovely on a sunny morning. Highly recomm"
+          },
+          "reviewerName": "Daniel W.",
+          "rating": 4,
+          "visitDate": {
+            "timestamp": 1771779600
+          },
+          "created": {
+            "timestamp": 1760000000
+          },
+          "changed": {
+            "timestamp": 1760000000
+          }
+        }
+      ]
+    }
+  }
+}

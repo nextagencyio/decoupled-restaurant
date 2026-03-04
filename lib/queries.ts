@@ -1,0 +1,149 @@
+import { gql } from '@apollo/client'
+
+export const GET_MENU_ITEMS = gql`
+  query GetMenuItems($first: Int = 20) {
+    nodeMenuItems(first: $first, sortKey: CREATED_AT) {
+      nodes {
+        id
+        title
+        path
+        created { timestamp }
+        changed { timestamp }
+        ... on NodeMenuItem {
+          body { processed summary }
+          price
+          menuCategory
+          dietaryInfo
+          image { url alt width height }
+        }
+      }
+    }
+  }
+`
+
+export const GET_EVENTS = gql`
+  query GetEvents($first: Int = 10) {
+    nodeEvents(first: $first, sortKey: CREATED_AT) {
+      nodes {
+        id
+        title
+        path
+        created { timestamp }
+        changed { timestamp }
+        ... on NodeEvent {
+          body { processed summary }
+          eventDate
+          location
+          image { url alt width height }
+        }
+      }
+    }
+  }
+`
+
+export const GET_REVIEWS = gql`
+  query GetReviews($first: Int = 10) {
+    nodeReviews(first: $first, sortKey: CREATED_AT) {
+      nodes {
+        id
+        title
+        path
+        created { timestamp }
+        changed { timestamp }
+        ... on NodeReview {
+          body { processed }
+          reviewerName
+          rating
+          visitDate
+        }
+      }
+    }
+  }
+`
+
+export const GET_HOMEPAGE_DATA = gql`
+  query GetHomepageData {
+    nodeHomepages(first: 1) {
+      nodes {
+        id
+        title
+        path
+        heroTitle
+        heroSubtitle
+        heroDescription { processed }
+        featuresItems {
+          ... on ParagraphFeatureItem {
+            id
+            title
+            description { processed }
+            icon
+          }
+        }
+        ctaTitle
+        ctaDescription { processed }
+        ctaPrimary
+        ctaSecondary
+      }
+    }
+  }
+`
+
+export const GET_NODE_BY_PATH = gql`
+  query GetNodeByPath($path: String!) {
+    route(path: $path) {
+      ... on RouteInternal {
+        entity {
+          ... on NodePage {
+            id
+            title
+            body { processed }
+          }
+          ... on NodeMenuItem {
+            id
+            title
+            body { processed }
+            price
+            menuCategory
+            dietaryInfo
+            image { url alt width height }
+          }
+          ... on NodeEvent {
+            id
+            title
+            body { processed }
+            eventDate
+            location
+            image { url alt width height }
+          }
+          ... on NodeReview {
+            id
+            title
+            body { processed }
+            reviewerName
+            rating
+            visitDate
+          }
+          ... on NodeHomepage {
+            id
+            title
+            heroTitle
+            heroSubtitle
+            heroDescription { processed }
+            featuresItems {
+              ... on ParagraphFeatureItem {
+                id
+                title
+                description { processed }
+                icon
+              }
+            }
+            ctaTitle
+            ctaDescription { processed }
+            ctaPrimary
+            ctaSecondary
+          }
+        }
+      }
+    }
+  }
+`

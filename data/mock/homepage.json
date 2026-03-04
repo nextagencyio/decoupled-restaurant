@@ -1,0 +1,59 @@
+{
+  "data": {
+    "nodeHomepages": {
+      "__typename": "NodeHomepageConnection",
+      "nodes": [
+        {
+          "__typename": "NodeHomepage",
+          "id": "homepage",
+          "title": "Ember & Bloom Homepage",
+          "path": "/homepage",
+          "heroTitle": "Where Fire Meets Farm",
+          "heroSubtitle": "Ember & Bloom",
+          "heroDescription": {
+            "processed": "<p>A wood-fired kitchen celebrating the seasons. Every dish begins with the finest local ingredients, kissed by flame and crafted with care. Join us for an unforgettable dining experience.</p>",
+            "summary": "A wood-fired kitchen celebrating the seasons. Every dish begins with the finest local ingredients, kissed by flame and crafted with care. Join us for an unforgettable dining experience."
+          },
+          "statsItems": [
+            {
+              "__typename": "ParagraphStatItem",
+              "id": "stat-1",
+              "title": "",
+              "number": "15+",
+              "label": "Local Farm Partners"
+            },
+            {
+              "__typename": "ParagraphStatItem",
+              "id": "stat-2",
+              "title": "",
+              "number": "4.8",
+              "label": "Average Rating"
+            },
+            {
+              "__typename": "ParagraphStatItem",
+              "id": "stat-3",
+              "title": "",
+              "number": "8",
+              "label": "Years Open"
+            },
+            {
+              "__typename": "ParagraphStatItem",
+              "id": "stat-4",
+              "title": "",
+              "number": "200+",
+              "label": "Wine Selections"
+            }
+          ],
+          "featuredItemsTitle": "From Our Kitchen",
+          "ctaTitle": "Reserve Your Table",
+          "ctaDescription": {
+            "processed": "<p>Whether it is a romantic dinner for two, a family celebration, or a corporate gathering, we will make your evening exceptional. Book online or call us directly.</p>",
+            "summary": "Whether it is a romantic dinner for two, a family celebration, or a corporate gathering, we will make your evening exceptional. Book online or call us directly."
+          },
+          "ctaPrimary": "Make a Reservation",
+          "ctaSecondary": "View Full Menu"
+        }
+      ]
+    }
+  }
+}

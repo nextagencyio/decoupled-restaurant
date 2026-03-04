@@ -1,0 +1,279 @@
+{
+  "data": {
+    "nodeMenuItems": {
+      "__typename": "NodeMenuItemConnection",
+      "nodes": [
+        {
+          "__typename": "NodeMenuItem",
+          "id": "menu-wood-fired-salmon",
+          "title": "Wood-Fired King Salmon",
+          "path": "/menu/wood-fired-salmon",
+          "body": {
+            "processed": "<p>Wild King salmon roasted over cherry wood, served with charred broccolini, fingerling potatoes, and a Meyer lemon herb butter. The wood fire lends a subtle smokiness that complements the rich, silky fish.</p>",
+            "summary": "Wild King salmon roasted over cherry wood, served with charred broccolini, fingerling potatoes, and a Meyer lemon herb butter. The wood fire lends a subtle smokiness that complements the rich, silky f"
+          },
+          "price": "$38",
+          "menuCategory": "Entrees",
+          "dietaryInfo": "Gluten-Free",
+          "image": {
+            "url": "https://images.unsplash.com/photo-1467003909585-2f8a72700288?w=800&q=80",
+            "alt": "Wood-fired salmon with broccolini",
+            "width": 800,
+            "height": 533,
+            "variations": [
+              {
+                "name": "LARGE",
+                "url": "https://images.unsplash.com/photo-1467003909585-2f8a72700288?w=800&q=80",
+                "width": 800,
+                "height": 533
+              },
+              {
+                "name": "MEDIUM",
+                "url": "https://images.unsplash.com/photo-1467003909585-2f8a72700288?w=480&q=80",
+                "width": 480,
+                "height": 320
+              },
+              {
+                "name": "THUMBNAIL",
+                "url": "https://images.unsplash.com/photo-1467003909585-2f8a72700288?w=200&q=80",
+                "width": 200,
+                "height": 133
+              }
+            ]
+          },
+          "created": {
+            "timestamp": 1760000000
+          },
+          "changed": {
+            "timestamp": 1760000000
+          }
+        },
+        {
+          "__typename": "NodeMenuItem",
+          "id": "menu-dry-aged-ribeye",
+          "title": "Dry-Aged Ribeye",
+          "path": "/menu/dry-aged-ribeye",
+          "body": {
+            "processed": "<p>45-day dry-aged prime ribeye, seared over live oak and finished with bone marrow compound butter. Served with roasted garlic mashed potatoes and seasonal vegetables from our partner farm.</p>",
+            "summary": "45-day dry-aged prime ribeye, seared over live oak and finished with bone marrow compound butter. Served with roasted garlic mashed potatoes and seasonal vegetables from our partner farm."
+          },
+          "price": "$52",
+          "menuCategory": "Entrees",
+          "dietaryInfo": "",
+          "image": {
+            "url": "https://images.unsplash.com/photo-1544025162-d76694265947?w=800&q=80",
+            "alt": "Dry-aged ribeye steak on a plate",
+            "width": 800,
+            "height": 533,
+            "variations": [
+              {
+                "name": "LARGE",
+                "url": "https://images.unsplash.com/photo-1544025162-d76694265947?w=800&q=80",
+                "width": 800,
+                "height": 533
+              },
+              {
+                "name": "MEDIUM",
+                "url": "https://images.unsplash.com/photo-1544025162-d76694265947?w=480&q=80",
+                "width": 480,
+                "height": 320
+              },
+              {
+                "name": "THUMBNAIL",
+                "url": "https://images.unsplash.com/photo-1544025162-d76694265947?w=200&q=80",
+                "width": 200,
+                "height": 133
+              }
+            ]
+          },
+          "created": {
+            "timestamp": 1760000000
+          },
+          "changed": {
+            "timestamp": 1760000000
+          }
+        },
+        {
+          "__typename": "NodeMenuItem",
+          "id": "menu-heirloom-salad",
+          "title": "Heirloom Tomato Salad",
+          "path": "/menu/heirloom-tomato-salad",
+          "body": {
+            "processed": "<p>Peak-season heirloom tomatoes from Sunrise Farm with burrata, basil oil, aged balsamic, and Maldon sea salt. Simple, perfect, and available only when tomatoes are at their best.</p>",
+            "summary": "Peak-season heirloom tomatoes from Sunrise Farm with burrata, basil oil, aged balsamic, and Maldon sea salt. Simple, perfect, and available only when tomatoes are at their best."
+          },
+          "price": "$18",
+          "menuCategory": "Starters",
+          "dietaryInfo": "Vegetarian, Gluten-Free",
+          "image": {
+            "url": "https://images.unsplash.com/photo-1592417817098-8fd3d9eb14a5?w=800&q=80",
+            "alt": "Heirloom tomato salad with burrata",
+            "width": 800,
+            "height": 533,
+            "variations": [
+              {
+                "name": "LARGE",
+                "url": "https://images.unsplash.com/photo-1592417817098-8fd3d9eb14a5?w=800&q=80",
+                "width": 800,
+                "height": 533
+              },
+              {
+                "name": "MEDIUM",
+                "url": "https://images.unsplash.com/photo-1592417817098-8fd3d9eb14a5?w=480&q=80",
+                "width": 480,
+                "height": 320
+              },
+              {
+                "name": "THUMBNAIL",
+                "url": "https://images.unsplash.com/photo-1592417817098-8fd3d9eb14a5?w=200&q=80",
+                "width": 200,
+                "height": 133
+              }
+            ]
+          },
+          "created": {
+            "timestamp": 1760000000
+          },
+          "changed": {
+            "timestamp": 1760000000
+          }
+        },
+        {
+          "__typename": "NodeMenuItem",
+          "id": "menu-mushroom-pizza",
+          "title": "Wild Mushroom Flatbread",
+          "path": "/menu/wild-mushroom-flatbread",
+          "body": {
+            "processed": "<p>Wood-fired flatbread topped with a mix of foraged wild mushrooms, truffle cream, fontina cheese, and fresh thyme. Our dough is naturally leavened for 72 hours before baking in the 800-degree oven.</p>",
+            "summary": "Wood-fired flatbread topped with a mix of foraged wild mushrooms, truffle cream, fontina cheese, and fresh thyme. Our dough is naturally leavened for 72 hours before baking in the 800-degree oven."
+          },
+          "price": "$22",
+          "menuCategory": "Starters",
+          "dietaryInfo": "Vegetarian",
+          "image": {
+            "url": "https://images.unsplash.com/photo-1513104890138-7c749659a591?w=800&q=80",
+            "alt": "Wood-fired mushroom flatbread",
+            "width": 800,
+            "height": 533,
+            "variations": [
+              {
+                "name": "LARGE",
+                "url": "https://images.unsplash.com/photo-1513104890138-7c749659a591?w=800&q=80",
+                "width": 800,
+                "height": 533
+              },
+              {
+                "name": "MEDIUM",
+                "url": "https://images.unsplash.com/photo-1513104890138-7c749659a591?w=480&q=80",
+                "width": 480,
+                "height": 320
+              },
+              {
+                "name": "THUMBNAIL",
+                "url": "https://images.unsplash.com/photo-1513104890138-7c749659a591?w=200&q=80",
+                "width": 200,
+                "height": 133
+              }
+            ]
+          },
+          "created": {
+            "timestamp": 1760000000
+          },
+          "changed": {
+            "timestamp": 1760000000
+          }
+        },
+        {
+          "__typename": "NodeMenuItem",
+          "id": "menu-apple-galette",
+          "title": "Apple Galette",
+          "path": "/menu/apple-galette",
+          "body": {
+            "processed": "<p>Rustic apple galette made with Honeycrisp apples from Orchard Hill Farm, brown butter, and a hint of cardamom. Served warm with house-made vanilla bean ice cream and salted caramel.</p>",
+            "summary": "Rustic apple galette made with Honeycrisp apples from Orchard Hill Farm, brown butter, and a hint of cardamom. Served warm with house-made vanilla bean ice cream and salted caramel."
+          },
+          "price": "$14",
+          "menuCategory": "Desserts",
+          "dietaryInfo": "Vegetarian",
+          "image": {
+            "url": "https://images.unsplash.com/photo-1568571780765-9276ac8b75a2?w=800&q=80",
+            "alt": "Rustic apple galette with ice cream",
+            "width": 800,
+            "height": 533,
+            "variations": [
+              {
+                "name": "LARGE",
+                "url": "https://images.unsplash.com/photo-1568571780765-9276ac8b75a2?w=800&q=80",
+                "width": 800,
+                "height": 533
+              },
+              {
+                "name": "MEDIUM",
+                "url": "https://images.unsplash.com/photo-1568571780765-9276ac8b75a2?w=480&q=80",
+                "width": 480,
+                "height": 320
+              },
+              {
+                "name": "THUMBNAIL",
+                "url": "https://images.unsplash.com/photo-1568571780765-9276ac8b75a2?w=200&q=80",
+                "width": 200,
+                "height": 133
+              }
+            ]
+          },
+          "created": {
+            "timestamp": 1760000000
+          },
+          "changed": {
+            "timestamp": 1760000000
+          }
+        },
+        {
+          "__typename": "NodeMenuItem",
+          "id": "menu-smoked-old-fashioned",
+          "title": "Smoked Old Fashioned",
+          "path": "/menu/smoked-old-fashioned",
+          "body": {
+            "processed": "<p>Our signature cocktail: bourbon smoked tableside with applewood chips, stirred with demerara syrup, aromatic bitters, and a flamed orange peel. A theatrical start to any evening.</p>",
+            "summary": "Our signature cocktail: bourbon smoked tableside with applewood chips, stirred with demerara syrup, aromatic bitters, and a flamed orange peel. A theatrical start to any evening."
+          },
+          "price": "$16",
+          "menuCategory": "Cocktails",
+          "dietaryInfo": "",
+          "image": {
+            "url": "https://images.unsplash.com/photo-1470337458703-46ad1756a187?w=800&q=80",
+            "alt": "Smoked Old Fashioned cocktail",
+            "width": 800,
+            "height": 533,
+            "variations": [
+              {
+                "name": "LARGE",
+                "url": "https://images.unsplash.com/photo-1470337458703-46ad1756a187?w=800&q=80",
+                "width": 800,
+                "height": 533
+              },
+              {
+                "name": "MEDIUM",
+                "url": "https://images.unsplash.com/photo-1470337458703-46ad1756a187?w=480&q=80",
+                "width": 480,
+                "height": 320
+              },
+              {
+                "name": "THUMBNAIL",
+                "url": "https://images.unsplash.com/photo-1470337458703-46ad1756a187?w=200&q=80",
+                "width": 200,
+                "height": 133
+              }
+            ]
+          },
+          "created": {
+            "timestamp": 1760000000
+          },
+          "changed": {
+            "timestamp": 1760000000
+          }
+        }
+      ]
+    }
+  }
+}

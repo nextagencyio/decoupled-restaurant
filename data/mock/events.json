@@ -1,0 +1,147 @@
+{
+  "data": {
+    "nodeEvents": {
+      "__typename": "NodeEventConnection",
+      "nodes": [
+        {
+          "__typename": "NodeEvent",
+          "id": "event-harvest-dinner",
+          "title": "Farm-to-Table Harvest Dinner",
+          "path": "/events/harvest-dinner",
+          "body": {
+            "processed": "<p>Join us for a special five-course harvest dinner showcasing the best of the fall season. Chef Elena will prepare a prix fixe menu featuring ingredients sourced exclusively from our partner farms within 25 miles of the restaurant.</p><p>Wine pairings selected by our sommelier are available. This intimate dinner is limited to 40 guests.</p>",
+            "summary": "Join us for a special five-course harvest dinner showcasing the best of the fall season. Chef Elena will prepare a prix fixe menu featuring ingredients sourced exclusively from our partner farms withi"
+          },
+          "eventDate": {
+            "timestamp": 1792279800
+          },
+          "location": "Garden Dining Room",
+          "image": {
+            "url": "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=800&q=80",
+            "alt": "Elegant farm-to-table dinner setting",
+            "width": 800,
+            "height": 533,
+            "variations": [
+              {
+                "name": "LARGE",
+                "url": "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=800&q=80",
+                "width": 800,
+                "height": 533
+              },
+              {
+                "name": "MEDIUM",
+                "url": "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=480&q=80",
+                "width": 480,
+                "height": 320
+              },
+              {
+                "name": "THUMBNAIL",
+                "url": "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=200&q=80",
+                "width": 200,
+                "height": 133
+              }
+            ]
+          },
+          "created": {
+            "timestamp": 1760000000
+          },
+          "changed": {
+            "timestamp": 1760000000
+          }
+        },
+        {
+          "__typename": "NodeEvent",
+          "id": "event-wine-dinner",
+          "title": "Winemaker's Dinner with Willamette Valley Vineyards",
+          "path": "/events/winemakers-dinner",
+          "body": {
+            "processed": "<p>An exclusive evening pairing Chef Elena's wood-fired cuisine with wines from Willamette Valley Vineyards. Winemaker Sarah Kline will guide guests through each pairing, sharing stories of the harvest and the art of winemaking.</p><p>Five courses, five wines, one unforgettable evening. Space is limited to 30 guests.</p>",
+            "summary": "An exclusive evening pairing Chef Elena's wood-fired cuisine with wines from Willamette Valley Vineyards. Winemaker Sarah Kline will guide guests through each pairing, sharing stories of the harvest a"
+          },
+          "eventDate": {
+            "timestamp": 1777161600
+          },
+          "location": "Main Dining Room",
+          "image": {
+            "url": "https://images.unsplash.com/photo-1510812431401-41d2bd2722f3?w=800&q=80",
+            "alt": "Wine glasses at a dinner table",
+            "width": 800,
+            "height": 533,
+            "variations": [
+              {
+                "name": "LARGE",
+                "url": "https://images.unsplash.com/photo-1510812431401-41d2bd2722f3?w=800&q=80",
+                "width": 800,
+                "height": 533
+              },
+              {
+                "name": "MEDIUM",
+                "url": "https://images.unsplash.com/photo-1510812431401-41d2bd2722f3?w=480&q=80",
+                "width": 480,
+                "height": 320
+              },
+              {
+                "name": "THUMBNAIL",
+                "url": "https://images.unsplash.com/photo-1510812431401-41d2bd2722f3?w=200&q=80",
+                "width": 200,
+                "height": 133
+              }
+            ]
+          },
+          "created": {
+            "timestamp": 1760000000
+          },
+          "changed": {
+            "timestamp": 1760000000
+          }
+        },
+        {
+          "__typename": "NodeEvent",
+          "id": "event-brunch-class",
+          "title": "Sunday Morning Cooking Class",
+          "path": "/events/sunday-cooking-class",
+          "body": {
+            "processed": "<p>Learn the fundamentals of wood-fired cooking in this hands-on class. Chef Elena will teach you how to manage heat, develop flavor through fire, and prepare three dishes in our wood-fired oven.</p><p>Class includes all ingredients, recipes to take home, and a glass of prosecco. Limited to 12 participants per session.</p>",
+            "summary": "Learn the fundamentals of wood-fired cooking in this hands-on class. Chef Elena will teach you how to manage heat, develop flavor through fire, and prepare three dishes in our wood-fired oven.Class in"
+          },
+          "eventDate": {
+            "timestamp": 1777820400
+          },
+          "location": "Open Kitchen",
+          "image": {
+            "url": "https://images.unsplash.com/photo-1556910103-1c02745aae4d?w=800&q=80",
+            "alt": "Chef teaching a cooking class",
+            "width": 800,
+            "height": 533,
+            "variations": [
+              {
+                "name": "LARGE",
+                "url": "https://images.unsplash.com/photo-1556910103-1c02745aae4d?w=800&q=80",
+                "width": 800,
+                "height": 533
+              },
+              {
+                "name": "MEDIUM",
+                "url": "https://images.unsplash.com/photo-1556910103-1c02745aae4d?w=480&q=80",
+                "width": 480,
+                "height": 320
+              },
+              {
+                "name": "THUMBNAIL",
+                "url": "https://images.unsplash.com/photo-1556910103-1c02745aae4d?w=200&q=80",
+                "width": 200,
+                "height": 133
+              }
+            ]
+          },
+          "created": {
+            "timestamp": 1760000000
+          },
+          "changed": {
+            "timestamp": 1760000000
+          }
+        }
+      ]
+    }
+  }
+}
