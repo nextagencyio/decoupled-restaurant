@@ -19,28 +19,28 @@
               "__typename": "ParagraphStatItem",
               "id": "stat-1",
               "title": "",
-              "number": "15+",
+              "number": "15+", "value": "15+",
               "label": "Local Farm Partners"
             },
             {
               "__typename": "ParagraphStatItem",
               "id": "stat-2",
               "title": "",
-              "number": "4.8",
+              "number": "4.8", "value": "4.8",
               "label": "Average Rating"
             },
             {
               "__typename": "ParagraphStatItem",
               "id": "stat-3",
               "title": "",
-              "number": "8",
+              "number": "8", "value": "8",
               "label": "Years Open"
             },
             {
               "__typename": "ParagraphStatItem",
               "id": "stat-4",
               "title": "",
-              "number": "200+",
+              "number": "200+", "value": "200+",
               "label": "Wine Selections"
             }
           ],
