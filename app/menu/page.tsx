@@ -7,6 +7,7 @@ import Header from '../components/Header'
 import MenuItemCard from '../components/MenuItemCard'
 
 export const revalidate = 3600
+export const dynamic = 'force-dynamic'
 
 export const metadata: Metadata = {
   title: 'Our Menu | Ember & Bloom',

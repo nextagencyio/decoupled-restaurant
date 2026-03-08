@@ -7,6 +7,7 @@ import Header from '../components/Header'
 import ReviewCard from '../components/ReviewCard'
 
 export const revalidate = 3600
+export const dynamic = 'force-dynamic'
 
 export const metadata: Metadata = {
   title: 'Reviews | Ember & Bloom',
