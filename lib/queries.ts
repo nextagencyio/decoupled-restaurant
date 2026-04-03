@@ -10,13 +10,11 @@ export const GET_MENU_ITEMS = gql`
         path
         created { timestamp }
         changed { timestamp }
-        ... on NodeMenuItem {
-          body { processed summary }
-          price
-          menuCategory
-          dietaryInfo
-          image { url alt width height }
-        }
+        body { processed summary }
+        price
+        menuCategory
+        dietaryInfo
+        image { url alt width height }
       }
     }
   }
@@ -31,12 +29,10 @@ export const GET_EVENTS = gql`
         path
         created { timestamp }
         changed { timestamp }
-        ... on NodeEvent {
-          body { processed summary }
-          eventDate
-          location
-          image { url alt width height }
-        }
+        body { processed summary }
+        eventDate { timestamp time }
+        location
+        image { url alt width height }
       }
     }
   }
@@ -51,12 +47,10 @@ export const GET_REVIEWS = gql`
         path
         created { timestamp }
         changed { timestamp }
-        ... on NodeReview {
-          body { processed }
-          reviewerName
-          rating
-          visitDate
-        }
+        body { processed }
+        reviewerName
+        rating
+        visitDate { timestamp time }
       }
     }
   }
@@ -112,7 +106,7 @@ export const GET_NODE_BY_PATH = gql`
             id
             title
             body { processed }
-            eventDate
+            eventDate { timestamp time }
             location
             image { url alt width height }
           }
@@ -122,7 +116,7 @@ export const GET_NODE_BY_PATH = gql`
             body { processed }
             reviewerName
             rating
-            visitDate
+            visitDate { timestamp time }
           }
           ... on NodeHomepage {
             id

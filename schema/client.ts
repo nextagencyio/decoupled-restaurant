@@ -8,6 +8,7 @@
 import type { DecoupledClient } from 'decoupled-client'
 import type { DrupalNode } from 'decoupled-client'
 import type { QueryOptions } from 'decoupled-client'
+import { GET_NODE_BY_PATH } from '@/lib/queries'
 
 // Placeholder types — sync-schema will replace with actual content types
 export type ContentNode = DrupalNode
@@ -30,15 +31,8 @@ export function createTypedClient(client: DecoupledClient): TypedClient {
     async getEntries() { return [] },
     async getEntry() { return null },
     async getEntryByPath(path) {
-      return client.queryByPath(path, `
-        query ($path: String!) {
-          route(path: $path) {
-            ... on RouteInternal {
-              entity { ... on NodePage { __typename id title path body { processed } } }
-            }
-          }
-        }
-      `)
+      const data = await client.query(GET_NODE_BY_PATH, { path })
+      return data?.route?.entity || null
     },
     async raw(query, variables) { return client.query(query, variables) },
   }

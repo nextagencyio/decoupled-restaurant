@@ -10,6 +10,7 @@
 import { createClient } from 'decoupled-client'
 import type { TypedClient } from '@/schema/client'
 import { isDemoMode, handleMockQuery } from './demo-mode'
+import { GET_NODE_BY_PATH } from './queries'
 
 let _client: TypedClient | null = null
 let _mockClient: TypedClient | null = null
@@ -84,15 +85,8 @@ export function getClient(): TypedClient {
       async getEntries() { return [] },
       async getEntry() { return null },
       async getEntryByPath(path) {
-        return base.queryByPath(path, `
-          query ($path: String!) {
-            route(path: $path) {
-              ... on RouteInternal {
-                entity { ... on NodePage { __typename id title path body { processed } } }
-              }
-            }
-          }
-        `)
+        const data = await base.query(GET_NODE_BY_PATH, { path })
+        return data?.route?.entity || null
       },
       async raw(query, variables) { return base.query(query, variables) },
     } as TypedClient

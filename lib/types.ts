@@ -42,7 +42,7 @@ export interface MenuItemData {
 
 export interface DrupalEvent extends DrupalNode {
   body?: { processed: string; summary?: string }
-  eventDate?: string
+  eventDate?: { timestamp: number; time?: string }
   location?: string
   image?: {
     url: string
@@ -61,7 +61,7 @@ export interface DrupalReview extends DrupalNode {
   body?: { processed: string }
   reviewerName?: string
   rating?: number
-  visitDate?: string
+  visitDate?: { timestamp: number; time?: string }
 }
 
 export interface ReviewData {

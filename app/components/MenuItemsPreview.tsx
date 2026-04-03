@@ -1,14 +1,16 @@
 'use client'
 
 import Link from 'next/link'
-import { useQuery } from '@apollo/client'
+import { useQuery, gql as gqlParse } from '@apollo/client'
 import { GET_MENU_ITEMS } from '@/lib/queries'
 import { MenuItemData, DrupalMenuItem } from '@/lib/types'
+
+const MENU_ITEMS_DOC = gqlParse(GET_MENU_ITEMS)
 import { ArrowRight, UtensilsCrossed } from 'lucide-react'
 import ResponsiveImage from './ResponsiveImage'
 
 export default function MenuItemsPreview() {
-  const { data, loading, error } = useQuery<MenuItemData>(GET_MENU_ITEMS, { variables: { first: 3 } })
+  const { data, loading, error } = useQuery<MenuItemData>(MENU_ITEMS_DOC, { variables: { first: 3 } })
   const items = data?.nodeMenuItems?.nodes || []
 
   if (loading) {

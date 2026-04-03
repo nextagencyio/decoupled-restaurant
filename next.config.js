@@ -4,6 +4,7 @@ const nextConfig = {
     unoptimized: true,
     remotePatterns: [
       { protocol: 'http', hostname: 'template.localhost', port: '8888', pathname: '/**' },
+      { protocol: 'https', hostname: '**.ddev.site', pathname: '/**' },
       { protocol: 'https', hostname: '**.decoupled.website', pathname: '/**' },
       { protocol: 'http', hostname: '**.decoupled.website', pathname: '/**' },
       { protocol: 'https', hostname: 'images.unsplash.com', pathname: '/**' },
